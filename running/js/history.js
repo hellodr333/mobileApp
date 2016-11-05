@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	// 省略号的实现
-	function text(arg){
+	function text(id){
 		// 获取所有p前的span
-		var $span = $(arg).find(".panel-body  span");
+		var $span = $(id).find(".panel-body  span");
 		// 遍历所有span
 		$span.each(function(index){
 			// 获取panel-body宽度并换算成em
@@ -14,11 +14,6 @@ $(document).ready(function(){
 		});	
 	}
 	text("#get");
-
-	// 未读标志
-	// if(未读条件？){
-	// 	$("#get #panel-1").css("borderLeft","2px solid #f00");
-	// }
 
 	// 切换收到发出并变换底部边框
 	$(".hisHeaderGet").click(function(){
@@ -49,10 +44,7 @@ $(document).ready(function(){
 	var $panel = $(".timeline-panel");
 	$panel.each(function(index){
 		$(this).click(function(){
-			// 社长或管理员
 			window.location.href = "notification.html";
-			// 社员
-			// window.location.href = "notification2.html";
 		});
 	});
 });

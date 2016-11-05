@@ -47,70 +47,17 @@ function searchFocus(){
 searchFocus();
 
 // 搜索框ajax更新内容
-var json = {
-				"orgaResultName" : [{
-					"name" : "cod创业协会"
-				},{
-					"name" : "cod创业协会"
-				}],
-				"orgaResultNum" : [{
-					"num" : "23"
-				},{
-					"num" : "23"
-				}],
-				"orgaResultAct" : [{
-					"num" : "3"
-				},{
-					"num" : "3"
-				}],
-				"orgaResultPara2" : [{
-					"content" : "我们是一群致力于创新创业的有志青年"
-				},{
-					"content" : "我们是一群致力于创新创业的有志青年"
-				}]
-		};
-var json1 = {
-		"orgaResultName" : [{
-			"name" : "cod创业协会"
-		},{
-			"name" : "cod创业协会"
-		},{
-			"name" : "cod创业协会"
-		}],
-		"orgaResultNum" : [{
-			"num" : "23"
-		},{
-			"num" : "23"
-		},{
-			"num" : "23"
-		}],
-		"orgaResultAct" : [{
-			"num" : "3"
-		},{
-			"num" : "3"
-		},{
-			"num" : "3"
-		}],
-		"orgaResultPara2" : [{
-			"content" : "我们是一群致力于创新创业的有志青年"
-		},{
-			"content" : "我们是一群致力于创新创业的有志青年"
-		},{
-			"content" : "我们是一群致力于创新创业的有志青年"
-		}]
-};
+var json={};
 $(function(){
 	$("#orgaSearchInput").bind({
 		input:function(){
 			// 如果文本框内有值
 			if($("#orgaSearchInput").val()){
-				// ajax更新社团显示
-				// 回调函数
-				function callback1(){
+				// ajax更新联盟显示
 					// 移除ul中本来的标签
 					$(".orgaResult ul li,.orgaResult ul hr").remove();
 					// 若只有一个不需要hr标签
-					// 如果后台没有查询到值则提示没有此社团
+					// 如果后台没有查询到值则提示没有此联盟
 					if(json.orgaResultName.length == 0){
 						$('.orgaResult ul').find('').remove();
 					}
@@ -121,20 +68,14 @@ $(function(){
 							$(".orgaResult ul").append('<hr><li><div class="orgaResultContent"><a class = "infoHref" href="organizationInfo.html"><img src="../img/icon2.png" alt="" class = "orgaResultImg"><span class = "orgaResultName">'+ json.orgaResultName[i].name +'</span><span class = "orgaResultNum">'+ json.orgaResultNum[i].num +'人</span><span class = "orgaResultAct">'+ json.orgaResultAct[i].num +'活动<span class = "orgaResultPara2">'+ json.orgaResultPara2[i].content +'</span></span></a></div></li>');
 						}
 					}
-				}
-				callback1();
 			}
 			else{
 				// 如果文本框内值为空，则恢复默认显示
-				// 回调函数
-				function callback2(){
 					$(".orgaResult ul li,.orgaResult ul hr").remove();
 					$(".orgaResult ul").append('<li><div class="orgaResultContent"><a class = "infoHref" href="organizationInfo.html"><img src="../img/icon2.png" class = "orgaResultImg"><span class = "orgaResultName">'+ json1.orgaResultName[0].name +'</span><span class = "orgaResultNum">'+ json1.orgaResultNum[0].num +'人</span><span class = "orgaResultAct">'+ json1.orgaResultAct[0].num +'活动<span class = "orgaResultPara2">'+ json1.orgaResultPara2[0].content +'</span></span></a></div></li>');
-					for(var i = 1;i<json1.orgaResultName.length;i++){
+					for(var i = 1;i<json.orgaResultName.length;i++){
 						$(".orgaResult ul").append('<hr><li><div class="orgaResultContent"><a class = "infoHref" href="organizationInfo.html"><img src="../img/icon2.png" alt="" class = "orgaResultImg"><span class = "orgaResultName">'+ json1.orgaResultName[i].name +'</span><span class = "orgaResultNum">'+ json1.orgaResultNum[i].num +'人</span><span class = "orgaResultAct">'+ json1.orgaResultAct[i].num +'活动<span class = "orgaResultPara2">'+ json1.orgaResultPara2[i].content +'</span></span></a></div></li>');
 					}
-				}
-				callback2();
 			}
 		}	
 	})
