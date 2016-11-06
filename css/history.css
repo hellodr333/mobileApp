@@ -77,7 +77,6 @@
     margin-left: 15%;
     width: 80%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);
-    /*border-left: 2px solid red;*/
 }
 .panel-head{
     padding: 0 10px;
@@ -118,3 +117,4 @@
 #send{
     display: none;
 }
+.cursor{cursor:pointer;}
