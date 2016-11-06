@@ -30,13 +30,11 @@
 	margin-left: -3rem;
 }
 .notification-again{
-	/* position: absolute; */
-	/* z-index: 100; */
-	/* top: 1px; */
-	/* right: 5%; */
 	float: right;
 	margin-right: 5%;
 	color: #fff;
+	cursor:pointer;
+	font-style:normal;
 }
 .notification-again:visited{
 	color: #fff;
