@@ -95,11 +95,11 @@ hr {
 	left: 2rem;
 }
 .usr_and_pas input{
+	box-sizing:content-box;
 	border: none;
-	height: 36px;
+	height: 1.4rem;
 	width: 100%;
 	padding-left: 8rem;
-	line-height: 36px;
 	padding-top:11px;
 	padding-bottom:11px;
 }
