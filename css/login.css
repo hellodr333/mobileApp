@@ -96,10 +96,12 @@ hr {
 }
 .usr_and_pas input{
 	border: none;
-	height: 35px;
+	height: 36px;
 	width: 100%;
 	padding-left: 8rem;
-	line-height: 35px;
+	line-height: 36px;
+	padding-top:11px;
+	padding-bottom:11px;
 }
 .forget{
 	text-decoration: none;
