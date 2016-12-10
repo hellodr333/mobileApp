@@ -148,7 +148,7 @@ hr{
 	margin-top: 20px;
 }
 /*轮播图图片设置*/
-#treCarouselPhoto{
+.treCarouselPhoto{
 	width: 100%;
 	height: 180px;
 	overflow: hidden;
